@@ -6,7 +6,7 @@
   <arg name="USE_COM" default="true" />
 
   <arg name="default_frame_id" default="odom_on_ground" />
-  <arg name="INPUT_IMAGE" value="/multisense/left/image_rect_color"/>
+  <arg name="INPUT_IMAGE" default="/multisense/left/image_rect_color"/>
   <arg name="robot_name" default="hrp2jsknts" />
   <arg name="ROBOT_URDF_MODEL" default="$(find hrpsys_ros_bridge_tutorials)/models/HRP2JSKNTS.urdf.xacro" />
   <arg name="robot_model_config" default="$(find drc_task_common)/config/hrp2_interactive_marker.yaml" />
