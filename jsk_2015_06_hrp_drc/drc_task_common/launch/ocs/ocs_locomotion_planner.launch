@@ -1,8 +1,11 @@
 <launch>
   <arg name="REFINE_FOOTSTEP" default="true" />
-  <remap from="/tf" to="/ocs/tf" />
-  <remap from="/joint_states" to="/ocs/joint_states" />
-  <remap from="/robot_description" to="/ocs/robot_description" />
+  <arg name="ocs" default="true" />
+  <group if="$(arg ocs)">
+    <remap from="/tf" to="/ocs/tf" />
+    <remap from="/joint_states" to="/ocs/joint_states" />
+    <remap from="/robot_description" to="/ocs/robot_description" />
+  </group>
   <group>
     <!-- Footstep planner -->
     <node pkg="jsk_footstep_planner"
