@@ -6,7 +6,7 @@
     <remap from="/robot_description" to="/ocs/robot_description" />
   </group>
   <group unless="$(arg ocs)" >
-    <remap from="/ocs/communication/locomotion_cloud" to="/multisense/organized_image_points2_color" />
+    <remap from="/ocs/communication/locomotion_cloud" to="/locomotion/input/output" />
   </group>
   <group ns="ocs">
     <node pkg="jsk_topic_tools" type="standalone_complexed_nodelet"
